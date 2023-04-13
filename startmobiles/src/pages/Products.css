@@ -1,0 +1,119 @@
+.product-container{
+    height: 100vh;
+    width: 100vw;
+    
+    
+}
+.product-information-container{
+    display: flex;
+}
+
+
+
+.image-card{
+    height: 342px;
+    width: 325px;
+    background-color: rgb(122, 122, 122);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    border-radius: 5px;
+    
+    
+}
+.product-image{
+    position: absolute;
+    height: 310px;
+    width: 310px;
+    object-fit: contain;
+}
+.other-image-container{
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-around;
+    width: 325px;
+   
+    position: relative;
+    left: 100px;
+}
+.other-images{
+    background-color: rgb(111, 111, 111);
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.products-informations{
+    position: relative;
+    top: 100px;
+   left: 100px;
+}
+.products-title{
+    font-size: 35px;
+    font-weight: 500;
+    font-style: Mitr;
+}
+.product-price{
+    font-size: 30px;
+   font-weight: bold;
+    font-style: Mitr;
+    margin-top: 20px;
+}
+.product-des{
+    margin-top: 20px;
+    font-size: 25px;
+    font-style: Mitr;
+}
+.product-clr{
+    margin-top: 20px;
+    font-size: 20px;
+    font-style: Mitr;
+}
+.available-clr{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+.ft-box{
+    height: 50px;
+    width: 140px;
+    border: 2px solid #117FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+.features-box{
+    display: flex;
+    margin-top: 30px;
+    gap: 10px;
+    font-size: 20px;
+    font-family: Mitr;
+    font-weight: 500;
+   text-align: center;
+}
+.prd-card-btn{
+    height: 44px;
+    width: 130px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    color:white;
+    margin-top: 20px;
+    margin-right: 60px;
+    cursor: pointer;
+}
+.prd-card-btn:hover{
+     scale: 1.1;
+     transition: all;
+     transition-duration: 0.4s;
+}

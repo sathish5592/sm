@@ -1,0 +1,59 @@
+.babtn{
+    height: 78.82353210449219px;
+    width: 276px;
+    margin-left: 47px;
+    border: none;
+    border-radius: 100px;
+    font-size: roboto;
+    font-weight: 700;
+    font-size: 30px;
+    cursor: pointer;
+    
+}
+.babtn:hover{
+    scale: 1.05;
+    transition: all;
+    transition-duration: 0.4s;
+    transition-property: all;
+}
+#ba2-out-circle{
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: absolute;
+  height: 600px;
+  width: 600px;
+  
+left: 785px;
+top: 83px;
+transform: translateX(100px);
+border: 40px solid #4359FA;
+
+}
+#ba2blur{
+    filter: blur(200px);
+    
+   
+}
+#ba3stripe{
+    transform: rotate(29.35deg);
+  
+}
+.cards-box{
+    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    display:"flex";
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 90px;
+    margin-right: 90px;
+   
+   
+
+}
+.cards-box h1{
+    font-size: 28px;
+    font-family: Roboto;
+    font-weight: bold;
+    text-align: center;
+}
