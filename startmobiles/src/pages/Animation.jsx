@@ -36,7 +36,7 @@ const Animation = () => {
    <div >
         {show ? 
         
-        <div className='body ' style={{overflowX:"hidden",height:"100vh",width:"100vw"}}>
+        <div className='body ' style={{overflowY:"hidden",height:"100vh",width:"100vw"}}>
         <div class="animation01">
         <div></div>
         <div></div>
