@@ -21,8 +21,8 @@ const ProductsPage = (props) => {
                                       </div>
                                       <p style={{fontFamily:"poppins",fontWeight:"400",fontSize:"12px",color:"white",margin:"8px 13px "}}>{props.description}</p>
                                       <div className='prd-btn' style={{display:"flex",justifyContent:"space-between",alignItems:"center",margin:"10px",}}>
-                                        <button style={{backgroundColor:"#3AB5FB",height:"29px",width:"101px",borderRadius:"20px",fontFamily:"MItr",fontWeight:"400",fontSize:"16px",color:"white"}}>Buy Now</button>
-                                        <button style={{backgroundColor:"#F29D38",height:"29px",width:"120px",borderRadius:"20px",fontFamily:"MItr",fontWeight:"400",fontSize:"16px",color:"white"}} onClick={()=>navigate(`/ProductPage/${props.id}`)} >View more</button>
+                                        <button style={{backgroundColor:"#3AB5FB",height:"29px",width:"101px",borderRadius:"20px",fontFamily:"MItr",fontWeight:"400",fontSize:"16px",color:"white",cursor:"pointer"}}>Buy Now</button>
+                                        <button style={{backgroundColor:"#F29D38",height:"29px",width:"120px",borderRadius:"20px",fontFamily:"MItr",fontWeight:"400",fontSize:"16px",color:"white",cursor:"pointer"}} onClick={()=>navigate(`/ProductPage/${props.id}`)} >View more</button>
                                       </div>
                                 </div>
                                </div>

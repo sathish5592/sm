@@ -12,7 +12,7 @@ const HomePage = () => {
   const navigate=useNavigate()
   return (
    <div> 
-    <Navbar/>
+   
     <Banner/>
     
     <Deals/>

@@ -19,6 +19,8 @@ export const ShopContextProvider = (props) => {
   const [OrderedItem,setOrderedItems]=useState({
    
   });
+  const [total,setTotal]=useState(0);
+  const [show,setshow]=useState(false)
   
 
   const addToCart=(itemId)=>{
@@ -33,9 +35,21 @@ export const ShopContextProvider = (props) => {
  const cartAdd=()=>{
     setcartItemsRange(cartitemRange+1)
  }
+ const TotalPrice=(price)=>{
+       setTotal(total+price);
+ }
+ const ReduceTotalPrice=(price)=>{
+   setTotal(total-price);
+}
+const RangereduceTotalPrice=(price)=>{
+   setTotal(total-price);
+}
+
+
+
  console.log(cartItems);
 
- const contextValue={cartItems,addToCart,removeFromCart,itemRange,cartitemRange,setcartItemsRange,cartAdd,OrderedItem,setOrderedItems}
+ const contextValue={cartItems,addToCart,removeFromCart,itemRange,cartitemRange,setcartItemsRange,cartAdd,OrderedItem,RangereduceTotalPrice,setOrderedItems,TotalPrice,ReduceTotalPrice,total,setTotal,show,setshow}
 
   return (
     <ShopContext.Provider value={contextValue}>

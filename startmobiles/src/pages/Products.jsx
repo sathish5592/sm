@@ -5,6 +5,7 @@ import './Products.css'
 import RecommendedProducts from './RecommendedProducts';
 import { ShopContext } from '../context/ShopContext';
 import Navbar from './Navbar';
+import Footer from './Footer'
 
 const Products = () => {
    const [rangevalue,setrangevalue]=useState(1);
@@ -13,6 +14,25 @@ const Products = () => {
     const rmdprd=hot.filter((element)=>element.category===prd.category);
     const {addToCart}=useContext(ShopContext);
     const {itemRange}=useContext(ShopContext);
+    const {TotalPrice}=useContext(ShopContext);
+    var animateButton = function(e) {
+
+      e.preventDefault();
+      //reset animation
+      e.target.classList.remove('animate');
+      
+      e.target.classList.add('animate');
+      setTimeout(function(){
+        e.target.classList.remove('animate');
+      },700);
+    };
+    
+    var bubblyButtons = document.getElementsByClassName("bubbly-button");
+    
+    for (var i = 0; i < bubblyButtons.length; i++) {
+      bubblyButtons[i].addEventListener('click', animateButton, false);
+    }
+    
 
      console.log();
    
@@ -43,13 +63,8 @@ const Products = () => {
                              <h1 className='product-title'>{prd.title}</h1>
                              <h1 className='product-price' style={{color:"red"}}>{prd.price}</h1>
                              <p className='product-des'>{prd.description}</p>
-                             <p className='product-clr' >Color :   <b>{prd.backgroundColorCategory2}</b> </p>
-                             <div className='products-colors' style={{display:"flex",gap:"10px",marginTop:"20px"}}>
-                                     <div className='available-clr' style={{backgroundColor:"red"}} ></div>
-                                     <div className='available-clr' style={{backgroundColor:"green"}} ></div>
-                                     <div className='available-clr' style={{backgroundColor:"yellow"}} ></div>
-                                     <div className='available-clr' style={{backgroundColor:"blue"}} ></div>
-                             </div>
+                            
+                             
 
                              <div className='features-box'>
                                     <div className='ft-box'><span>3000 mah</span></div>
@@ -57,20 +72,21 @@ const Products = () => {
                                     <div  className='ft-box'><span> 3000mah  </span> </div>
                              </div>
 
-                             <h4 style={{marginTop:"20px"}} >Quantity : {rangevalue}</h4>
+                            
 
-                            <input type="range" min={1} max={50} value={rangevalue} onChange={(e)=>setrangevalue(e.target.value)} style={{marginTop:"10px"}}/>
-                            <br/>
-                            <button className='prd-card-btn' style={{backgroundColor:"#3AB5FB"}}>Buy now</button>
-                            <button className='prd-card-btn' style={{backgroundColor:"#B55E0F"}} onClick={()=> {
+                           <div className='prd-btn' >
+                            <button className='prd-card-btn bubbly-button' style={{backgroundColor:"#3AB5FB"}}>Buy now</button>
+                            <button className='prd-card-btn bubbly-button' style={{backgroundColor:"#B55E0F"}} onClick={()=> {
                               addToCart(prd.id)
                               itemRange(rangevalue)
+                              TotalPrice( parseInt(prd.price))
                               }} >Add to cart</button>
+                              </div>
                    </div>
         
                        
         </div>     
-        <h1 style={{marginTop:"50px",textAlign:"center",marginBottom:"90px"}}> We Have Lots of Excellent <br/> and High Quality Products. <span style={{color:"red"}}> Check now</span>
+        <h1 className='prd-hh1'   style={{marginTop:"50px",textAlign:"center",marginBottom:"90px"}}> We Have Lots of Excellent <br/> and High Quality Products. <span style={{color:"red"}}> Check now</span>
                     
                     </h1>
 
@@ -80,6 +96,9 @@ const Products = () => {
                  return( <RecommendedProducts  {...item} />)
                  })} 
         </div>  
+
+
+        <Footer/>
 
    </div>
   )

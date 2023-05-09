@@ -8,6 +8,8 @@ import ProductsPage from './pages/ProductsPage';
 import {Form, Route,Routes} from 'react-router-dom'
 import Navbar from './pages/Navbar';
 import Forms from './pages/Forms';
+import Animation from './pages/Animation';
+
 
 
 
@@ -26,7 +28,10 @@ function App() {
          <Route path='/ProductPage/:id' element={<Products/>} />
          <Route path='/Cart' element={<Cart/>} />
          <Route path='/forms' element={ <Forms/> } />
+         <Route path='/T' element={ <Animation/> } />
+        
        </Routes>
+       
        </ShopContextProvider>
           
      </div>
